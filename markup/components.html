@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Library Components</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__top">
+				<a href="index.html" class="logo">MYLIB</a>
+				<nav class="menu">
+					<ul class="menu__list">
+						<li class="menu__list-item"><a href="elements.html" class="menu__list-link">Elements</a></li>
+						<li class="menu__list-item"><a href="components.html"
+								class="menu__list-link active">Components</a></li>
+						<li class="menu__list-item"><a href="#" class="menu__list-link">Layouts</a></li>
+						<li class="menu__list-item"><a href="#" class="menu__list-link">Drafts</a></li>
+						<li class="menu__list-item"><a href="#" class="menu__list-link">Documentation</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<div class="main">
+			<!-- Sidebar code -->
+			<nav class="sidebar">
+				<ul class="sidebar__list">
+					<li class="sidebar__list-item"><a href="#" class="sidebar__list-link active">Chevron Menu</a></li>
+					<li class="sidebar__list-item"><a href="#" class="sidebar__list-link">dropdown menu</a></li>
+					<li class="sidebar__list-item"><a href="#" class="sidebar__list-link">modal box</a></li>
+					<li class="sidebar__list-item"><a href="#" class="sidebar__list-link">allerts</a></li>
+				</ul>
+			</nav>
+			<div class="content">
+				<h2 class="typography__title">Chevron menu</h2>
+				<div class="main__inner">
+					<div class="decision">
+						<div class="decision-text">
+							<p>Possible to use on gradient background</p>
+							<p>Easy to use opacity for items background</p>
+							<p>Cross-browser</p>
+						</div>
+					</div>
+					<div class="chevron__menu">
+						<ul class="chevron__list">
+							<li class="chevron__list-item"><a href="#" class="chevron__list-link">ABOUT</a></li>
+							<li class="chevron__list-item"><a href="#" class="chevron__list-link">CAREERS</a></li>
+							<li class="chevron__list-item"><a href="#" class="chevron__list-link">FAQ</a></li>
+							<li class="chevron__list-item"><a href="#" class="chevron__list-link">contact</a></li>
+						</ul>
+					</div>
+					<div class="example__code">
+						<p>HTML</p>
+						<div class="example__code-item">
+							<pre>
+&lt;ul class=”list”>
+    &lt;li>&lt;a href=”#”>About&lt;/a>&lt;/li>
+    &lt;li&lt;&lt;a href=”#”>Career&lt;&lt;/a>&lt;/li>
+    &lt;li>&lt;a href=”#”>FAQ&lt;/a>&lt;/li>
+    &lt;li>&lt;a href=”#”>Contact&lt;/a>&lt;/li>
+&lt;/ul></pre>
+						</div>
+					</div>
+					<div class="example__code">
+						<p>CSS</p>
+						<div class="example__code-item">
+							<pre>
+div.menu-body-gradient  {
+  height: 96px;
+  padding: 2px 0;
+  background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 127.92%);
+}
+ul.list-gr {
+  margin:0;
+  padding: 0 60px;
+  text-align: right;
+}
+ul.list-gr li {
+  display: inline-block;
+  position: relative;
+  padding: 30px 25px 29px 25px;
+  margin: 0 20px 0 25px;
+  background-color: #ffffff;
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 37px;
+}
+ul.list-gr li:hover {
+  opacity: 0.7;
+}
+ul.list-gr li::after {
+  position: absolute;
+  top:0;
+  left: 100%;
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 48px 0 48px 25px;
+  border-color: transparent transparent transparent #ffffff;
+}
+ul.list-gr li > a {
+  vertical-align: top;
+  text-decoration: none;
+  color: #000000;
+}
+ul.list-gr li > a::after {
+  position: absolute;
+  left: -25px;
+  top: 0px;
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 25px 48px 0;
+  border-color: transparent #ffffff transparent transparent;
+}
+ul.list-gr li > a::before {
+  position: absolute;
+  left: -25px;
+  top: 48px;
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 48px 25px;
+  border-color: transparent transparent #ffffff transparent;
+}								
+							</pre>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	</div>
+	</div>
+</body>
+
+</html>
