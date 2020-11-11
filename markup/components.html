@@ -10,7 +10,7 @@
 	<title>Library Components</title>
 </head>
 
-<body>
+<body id="body">
 	<div class="wrapper">
 		<header class="header">
 			<div class="header__top">
@@ -31,17 +31,17 @@
 			<!-- Sidebar code -->
 			<nav class="sidebar">
 				<ul class="sidebar__list">
-					<li class="sidebar__list-item"><a href="#" class="sidebar__list-link active">Chevron Menu</a></li>
-					<li class="sidebar__list-item"><a href="#" class="sidebar__list-link">dropdown menu</a></li>
+					<li class="sidebar__list-item"><a href="#chevron" class="sidebar__list-link">Chevron Menu</a></li>
+					<li class="sidebar__list-item"><a href="#tabs"  class="sidebar__list-link">tabs</a></li>
 					<li class="sidebar__list-item"><a href="#" class="sidebar__list-link">modal box</a></li>
 					<li class="sidebar__list-item"><a href="#" class="sidebar__list-link">allerts</a></li>
 				</ul>
 			</nav>
 			<div class="content">
-				<h2 class="typography__title">Chevron menu</h2>
+				<h2 class="typography__title"><a id="chevron">Chevron menu</a></h2>
 				<div class="main__inner">
 					<div class="decision">
-						<div class="decision-text">
+					<div class="decision-text">
 							<p>Possible to use on gradient background</p>
 							<p>Easy to use opacity for items background</p>
 							<p>Cross-browser</p>
@@ -138,12 +138,167 @@ ul.list-gr li > a::before {
 						</div>
 					</div>
 				</div>
-			</div>
+				<h2 class="typography__title"><a id="tabs">Tabs</a></h2>
+				<div class="main__inner">
+					<div class="decision">
+					<div class="decision-text">
+							<p>Classic tabs for online stores</p>
+							<p>Used Pure JS and jquery library</p>
+							<p>Cross-browser</p>
+						</div>
+					</div>
+					<div class="tab__components"> 
+						<div class="search__tabs">
+							<a href="#tab-1" class="search__tabs-item search__tabs-item--active">Поиск по номеру</a>
+							<a href="#tab-2" class="search__tabs-item">Поиск по марке</a>
+							<a href="#tab-3" class="search__tabs-item">Поиск по названию товара</a>
+					  	</div>
+					  	<div class="search__content">
+							<div id="tab-1" class="search__content-item search__content-item--active">
+						  	<form class="search__content-form">
+								<input class="search__content-input" type="text" placeholder="Введите номер">
+								<button class="search__content-btn" type="submit">искать</button>
+						  	</form>
+							</div>
+							<div id="tab-2" class="search__content-item">
+						  	<form class="search__content-form">
+								<input class="search__content-input" type="text" placeholder="Введите марку">
+								<button class="search__content-btn" type="submit">искать</button>
+						  	</form>
+							</div>
+							<div id="tab-3" class="search__content-item">
+						  	<form class="search__content-form">
+								<input class="search__content-input" type="text" placeholder="Введите название товара">
+								<button class="search__content-btn" type="submit">искать</button>
+						  	</form>
+							</div>
+						</div>
+					</div>	
+					<div class="example__code">
+						<p>HTML</p>
+						<div class="example__code-item">
+							<pre>
+&lt;div class="search__tabs">
+	&lt;a href="#tab-1" class="search__tabs-item search__tabs-item--active">Поиск по номеру&lt;/a>
+	&lt;a href="#tab-2" class="search__tabs-item">Поиск по марке&lt;/a>
+	&lt;a href="#tab-3" class="search__tabs-item">Поиск по названию товара&lt;/a>
+	&lt;/div>
+	&lt;div class="search__content">
+	&lt;div id="tab-1" class="search__content-item search__content-item--active">
+		&lt;form class="search__content-form">
+		&lt;input class="search__content-input" type="text" placeholder="Введите номер">
+		&lt;button class="search__content-btn" type="submit">искать&lt;/button>
+		&lt;/form>
+	&lt;/div>
+	&lt;div id="tab-2" class="search__content-item">
+		&lt;form class="search__content-form">
+		&lt;input class="search__content-input" type="text" placeholder="Введите марку">
+		&lt;button class="search__content-btn" type="submit">искать&lt;/button>
+		&lt;/form>
+	&lt;/div>
+	&lt;div id="tab-3" class="search__content-item">
+		&lt;form class="search__content-form">
+		&lt;input class="search__content-input" type="text" placeholder="Введите название товара">
+		&lt;button class="search__content-btn" type="submit">искать&lt;/button>
+		&lt;/form>
+	&lt;/div>
+	&lt;/div></pre>
+						</div>
+					</div>
+					<div class="example__code">
+						<p>CSS</p>
+						<div class="example__code-item">
+							<pre>
+.search__tabs {
+	margin-bottom: 25px;
+}
+								
+.search__tabs-item {
+	color: black;
+	padding: 11px 26px 12px;
+	margin-bottom: 10px;
+}
+								
+.search__tabs-item--active {
+	border-radius: 5px;
+	background-color: #f0f0f4;
+	font-family: inherit;
+	font-weight: 700;
+}
+								
+.search__content-item {
+	display:
+								
+.search__content-item--active {
+	display: block;
+}
+								
+.search__content-form {
+	display: flex;
+}
+								
+.search__content-input {
+	background: #f0f0f4;
+	border: none;
+	border-radius: 3px;
+	padding: 5px 20px;
+	font-size: 16px;
+	line-height: 19px;
+	width: 100%;
+}
+								
+.search__content-input::placeholder {
+	color: #656464;
+}
+								
+.search__content-btn {
+	font-family: inherit;
+	font-size: 14px;
+	line-height: 17px;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	color: #ffffff;
+	background-color: #fba254;
+	padding: 17px 41px;
+	border: none;
+	border-radius: 3px;
+	margin-left: -3px;
+	cursor: pointer;
+}
+								
+.tab__components {
+	margin: 25px;</pre>
+						</div>
+					</div>
+					<div class="example__code">
+						<p>JavaScript</p>
+						<div class="example__code-item">
+							<pre>
+$(function () {
+
+	$('.search__tabs-item').on('click', function (e) {
+		e.preventDefault();
+								
+		$('.search__tabs-item').removeClass('search__tabs-item--active');
+		$('.search__content-item').removeClass('search__content-item--active');
+		$(this).addClass('search__tabs-item--active');
+		$($(this).attr('href')).addClass('search__content-item--active');
+	});
+								
+</pre>
+						</div>
+					</div>
+				</div>
+			</div>	
 		</div>
 	</div>
 	</div>
 	</div>
 	</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="js/main.js"></script>
+	
 </body>
 
 </html>
